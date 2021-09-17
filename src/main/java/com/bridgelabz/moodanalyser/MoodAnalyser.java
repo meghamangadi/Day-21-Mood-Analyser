@@ -6,16 +6,21 @@ public class MoodAnalyser {
 	public static void main(String[] args) {
 
 		String message = "I am in Sad Mood";
-		String mood = null;
+		String messages = "I am in Any Mood";
+
+		String sadmood = null;
+		String happayMood = null;
 		try {
 
-			mood = moodAnalyser.analyseMood(message);
+			sadmood = moodAnalyser.analyseMood(message);
+			happayMood = moodAnalyser.analyseMood(messages);
 		} catch (Exception e) {
 
 			e.printStackTrace();
 		}
 
-		System.out.println(mood);
+		System.out.println(sadmood);
+		System.out.println(happayMood);
 
 	}
 
