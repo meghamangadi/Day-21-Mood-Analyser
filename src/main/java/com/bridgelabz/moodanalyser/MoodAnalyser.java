@@ -69,4 +69,17 @@ public class MoodAnalyser {
 		}
 
 	}
+	
+	public String analyseMoodUsingMoodAnaylsisException(String msg) throws MoodAnalysisException {
+		try {
+			if (msg.toLowerCase().contains("sad")) {
+				return "Sad";
+			} else {
+				return "Happy";
+			}
+		} catch (NullPointerException e) {
+			 throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.NULL,"Invalid mood ");
+		}
+
+	}
 }

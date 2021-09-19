@@ -68,5 +68,18 @@ public class MoodAnalyserTest {
 			e.printStackTrace();
 		}
 	}
+	
+	@Test
+	public void givenMessage_Null_UsingMoodAnalysisException() {
+		
+		String actualResult = null;
+		MoodAnalyser moodanalyser = new MoodAnalyser( );
+		try {
+			actualResult = moodanalyser.analyseMoodUsingMoodAnaylsisException(null);
+		} catch (MoodAnalysisException e) {
+			System.out.println(e.toString());
+		}
+		Assert.assertEquals(null , actualResult);
+	}
 
 }
