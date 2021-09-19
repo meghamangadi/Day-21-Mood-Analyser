@@ -1,6 +1,7 @@
 package com.bridgelabz.moodanalyser;
 
 public class MoodAnalyser {
+
 	String message;
 
 	public MoodAnalyser() {
@@ -50,6 +51,21 @@ public class MoodAnalyser {
 			}
 		} catch (NullPointerException e) {
 			return "Happy";
+		}
+
+	}
+
+	public Moods analyseMoodUsingEnum() throws MoodAnalysisException {
+		try {
+			if (message.toLowerCase().contains("sad")) {
+				Moods mood = Moods.Sad;
+				return mood;
+			} else {
+				Moods mood = Moods.Happy;
+				return mood;
+			}
+		} catch (NullPointerException e) {
+			throw new MoodAnalysisException("No Mood");
 		}
 
 	}

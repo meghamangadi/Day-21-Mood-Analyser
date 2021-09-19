@@ -31,7 +31,7 @@ public class MoodAnalyserTest {
 	}
 
 	@Test
-	public void givenMessage_Null_ShouldReturnExceptionHandled()  {
+	public void givenMessage_Null_ShouldReturnExceptionHandled() {
 		String mood = null;
 		String actualResult = null;
 		MoodAnalyser moodanalyser = new MoodAnalyser(mood);
@@ -42,12 +42,9 @@ public class MoodAnalyserTest {
 		}
 		Assert.assertEquals(null, actualResult);
 	}
-	
-	
-	
 
 	@Test
-	public void givenMessage_Null_ShouldReturnHppy()  {
+	public void givenMessage_Null_ShouldReturnHppy() {
 		String mood = null;
 		String actualResult = null;
 		MoodAnalyser moodanalyser = new MoodAnalyser(mood);
@@ -58,5 +55,18 @@ public class MoodAnalyserTest {
 		}
 		Assert.assertEquals("Happy", actualResult);
 	}
-	
+
+	@Test
+	public void givenMessage_WhenProper_ShouldReturnModsUsingEnum() throws MoodAnalysisException {
+
+		String mood = "I am in Happy Mood";
+		MoodAnalyser moodanalyser = new MoodAnalyser(mood);
+		try {
+			Moods actualResult = moodanalyser.analyseMoodUsingEnum();
+			Assert.assertEquals(Moods.Happy, actualResult);
+		} catch (MoodAnalysisException e) {
+			e.printStackTrace();
+		}
+	}
+
 }
