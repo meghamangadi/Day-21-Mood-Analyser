@@ -12,7 +12,7 @@ public class MoodAnalyser {
 
 	public static void main(String[] args) {
 
-		String message = "I am in Sad Mood";
+		String message = "“I am in Happy Mood”";
 		String sadmood = null;
 		MoodAnalyser moodAnalyser = new MoodAnalyser(message);
 		try {
