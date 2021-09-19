@@ -40,4 +40,17 @@ public class MoodAnalyser {
 		}
 
 	}
+
+	public String analyseMoodForNullValueAndReturnHappy() throws MoodAnalysisException {
+		try {
+			if (message.toLowerCase().contains("sad")) {
+				return "Sad";
+			} else {
+				return "Happy";
+			}
+		} catch (NullPointerException e) {
+			return "Happy";
+		}
+
+	}
 }
