@@ -3,7 +3,6 @@ package com.bridgelabz.moodanalyser;
 import org.junit.Assert;
 import org.junit.Test;
 
- 
 
 public class MoodAnalyserTest {
 	@Test
